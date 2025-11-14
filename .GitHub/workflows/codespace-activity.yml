@@ -1,0 +1,23 @@
+name: Codespace Activity Generator
+
+on:
+  schedule:
+    # Run every 3 hours (adjust UTC as needed)
+    - cron: '0 */3 * * *'
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  generate-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4 # Action to clone the repository
+
+      - name: Generate activity (e.g., update a simple file)
+        run: |
+          echo "Activity generated at $(date)" >> activity.log
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add activity.log
+          git commit -m "Automated activity generation" || echo "No changes to commit"
+          git push
