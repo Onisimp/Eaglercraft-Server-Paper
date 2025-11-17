@@ -1,0 +1,8 @@
+     on:
+          workflow_dispatch:
+            inputs:
+              # Optional inputs for manual runs
+              logLevel:
+                description: 'Log level'
+                required: true
+                default: 'info'
