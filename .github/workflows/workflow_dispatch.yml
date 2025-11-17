@@ -1,4 +1,7 @@
+<<<<<<< HEAD:.github/workflow_dispatch.yml
     
+=======
+>>>>>>> refs/remotes/origin/main:.github/workflows/workflow_dispatch.yml
  on:
           workflow_dispatch:
             inputs:
