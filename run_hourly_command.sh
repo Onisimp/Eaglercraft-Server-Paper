@@ -1,8 +1,9 @@
-#!/bin/bash
+    #!/bin/bash
 
-# Navigate to the directory containing your YAML file
-cd /workspaces/your-repo-name
-
-# Execute the commands defined in the YAML file using a specific tool
-# Replace 'my-cli' and 'run-config' with the actual tool and command needed
-my-cli run-config codespace-hourly-command.yml
+    # Example: Print a message and list files
+    echo "Running hourly command..."
+    ls -la
+    
+    # Add your specific commands here
+    # For instance, if codespace-hourly-command.yml defines a specific action:
+    # gh codespace run hourly
