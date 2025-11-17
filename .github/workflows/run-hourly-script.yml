@@ -1,0 +1,18 @@
+    name: Run Hourly Codespace Command
+
+    on:
+      workflow_dispatch: # Allows manual triggering
+      schedule:
+        - cron: '0 * * * *' # Runs every hour at the 0th minute
+
+    jobs:
+      run-script-in-codespace:
+        runs-on: ubuntu-latest # Or a codespace-compatible runner
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+
+          - name: Run hourly command script
+            run: |
+              chmod +x ./run_hourly_command.sh
+              ./run_hourly_command.sh
