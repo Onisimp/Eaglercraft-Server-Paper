@@ -1,4 +1,5 @@
-     on:
+    
+ on:
           workflow_dispatch:
             inputs:
               # Optional inputs for manual runs

@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Navigate to the directory containing your YAML file
-cd /workspaces/your-repo-name
+# Navigate to the directory containing your YML file if it's not in the root
+# cd /path/to/your/yml/file 
 
-# Execute the commands defined in the YAML file using a specific tool
-# Replace 'my-cli' and 'run-config' with the actual tool and command needed
-my-cli run-config codespace-hourly-command.yml
+# Execute the YML file using a suitable command. 
+# This example assumes the YML defines a GitHub Actions workflow that can be triggered.
+# You might need to adjust the command based on what your YML file actually does.
+gh workflow run codespace-hourly-command.yml
